@@ -1,15 +1,16 @@
 import React from 'react';
-import {StyleSheet, View, Text} from 'react-native';
-import {Button} from '../../components';
+import { StyleSheet, View, Text } from 'react-native';
 
-import {Colors} from '../utils';
+import { Button } from '../../components';
 
-const ActionButton = ({desc, title}) => {
+import { Colors } from '../utils';
+
+const ActionButton = ({ desc, title, handlePress }) => {
   return (
-    <View style={{marginBottom: 43, maxWidth: 225}}>
+    <View style={{ marginBottom: 43, maxWidth: 225 }}>
       <Text style={styles.subtitle}>{desc}</Text>
       {/* TouchableOpacity itu button  */}
-      <Button title={title} />
+      <Button title={title} handlePress={handlePress} />
     </View>
   );
 };

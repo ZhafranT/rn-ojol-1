@@ -1,10 +1,10 @@
 import React from 'react';
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
-import {Colors} from '../../../page/utils';
+import { StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { Colors } from '../../page/utils';
 
-const Button = ({title}) => {
+const Button = ({ title, handlePress }) => {
   return (
-    <TouchableOpacity style={styles.buttonLogin}>
+    <TouchableOpacity style={styles.buttonLogin} onPress={handlePress}>
       <Text style={styles.textLogin}>{title}</Text>
     </TouchableOpacity>
   );

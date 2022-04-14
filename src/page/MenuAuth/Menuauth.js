@@ -1,13 +1,16 @@
 import React from 'react';
-import {StyleSheet, View, Text, Image, Br} from 'react-native';
+import { StyleSheet, View, Text, Image } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import ActionButton from './ActionButton';
 
 // colors
-import {Colors} from '../utils';
+import { Colors } from '../utils';
 // img
-import {MenuAuth} from '../../assets';
+import { MenuAuth } from '../../assets';
 
 const Menuauth = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
       <Image source={MenuAuth} style={styles.image} />
@@ -15,8 +18,16 @@ const Menuauth = () => {
         Selamat Datang {'\n'}
         di Pelayanan Konsumen
       </Text>
-      <ActionButton desc="Silakan masuk, jika sudah punya akun" title="Masuk" />
-      <ActionButton desc="Jika belum bisa daftar disini" title="Daftar" />
+      <ActionButton
+        desc="Silakan masuk, jika sudah punya akun"
+        title="Masuk"
+        handlePress={() => navigation.navigate('Login')}
+      />
+      <ActionButton
+        desc="Jika belum bisa daftar disini"
+        title="Daftar"
+        handlePress={() => navigation.navigate('Register')}
+      />
     </View>
   );
 };

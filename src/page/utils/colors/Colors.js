@@ -8,7 +8,8 @@ const Colors = {
   text: {
     tColorWhite: '#FFF',
     tColorGrey: '#C4C4C4',
+    tColorBlack: '#000000',
   },
 };
 
-export {Colors};
+export { Colors };
