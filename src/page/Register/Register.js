@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 
 import { MenuAuth } from '../../assets';
-import { Input } from '../../components/atoms';
+import { Input, Button } from '../../components/atoms';
 
 const Register = () => {
   return (
@@ -25,6 +25,13 @@ const Register = () => {
       <Input placeholder="Email" />
       <Input placeholder="No Headphone" />
       <Input placeholder="Password" />
+      <View
+        style={{
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}>
+        <Button title="Daftar" />
+      </View>
     </View>
   );
 };
